@@ -9,7 +9,7 @@
 	<title>
 	Commenti a: Ciao mondo!	</title>
 	<atom:link href="http://localhost/danieleciacci/2019/03/11/ciao-mondo/feed/" rel="self" type="application/rss+xml" />
-	<link>/2019/03/11/ciao-mondo/</link>
+	<link>/danieleciacci/2019/03/11/ciao-mondo/</link>
 	<description>Un nuovo sito targato WordPress</description>
 	<lastBuildDate>
 	Mon, 11 Mar 2019 10:23:38 +0000	</lastBuildDate>
@@ -21,10 +21,10 @@
 			<item>
 				<title>
 				Di: Un commentatore di WordPress				</title>
-				<link>/2019/03/11/ciao-mondo/#comment-1</link>
+				<link>/danieleciacci/2019/03/11/ciao-mondo/#comment-1</link>
 		<dc:creator><![CDATA[Un commentatore di WordPress]]></dc:creator>
 		<pubDate>Mon, 11 Mar 2019 10:23:38 +0000</pubDate>
-		<guid isPermaLink="false">/?p=1#comment-1</guid>
+		<guid isPermaLink="false">/danieleciacci/?p=1#comment-1</guid>
 					<description><![CDATA[Ciao, questo è un commento.
 Per iniziare a moderare, modificare ed eliminare commenti, visita la schermata commenti nella bacheca.
 Gli avatar di chi lascia un commento sono forniti da &lt;a href=&quot;https://it.gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]></description>
