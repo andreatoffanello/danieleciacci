@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+
+html,body{
+    margin: 0;
+}
+
+$font: 'Lora', serif;
+
+$text: #718093;
+
+$text2: #000000;
+
+$one: #fbc531;
+
+$two: #00a8ff;
+
+$three: #4cd137;
+
+
+h1, h2, h3, p, a, span {
+	color: $text;
+}
+
+a {
+	color: $text2;
+}
+
+p, span, h2, a {
+	font-family: $font;
+	font-weight: 300;
+}
+
+h1, h3, h4 {
+	font-family: $font;
+	font-weight: 700;
+}
+
+p,
+.entry-content p {
+	margin-top: 1.5em !important;
+    margin-bottom: 1.5rem;
+}
+
+.entry-content p a {
+	color: $text2;
+	border-bottom-color: $text2;
+	opacity:1;
+
+	&:hover {
+		color: $text2;
+		border-bottom-color: #ffffff;
+		opacity:.5;
+	} 
+}
+
+
+.entry-content {
+    padding: 64px 0;
+}
+
+.trigger {
+	position: relative;
+	color: $text2;
+
+	&:after{
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		height: 5px;
+		width: 100%;
+		z-index: -1;
+		opacity: .5;
+		transition: .8s cubic-bezier(0,.8,.5,1);
+	}
+
+	&:before{
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: -8px;
+		height: 100%;
+		width: 0%;
+		z-index: -1;
+		opacity: .5;
+		transition: .5s cubic-bezier(0,.8,.5,1);
+	}
+
+	&:hover {
+
+		&:after {
+			width: 0%;
+			transition: .5s cubic-bezier(0,.8,.5,1);
+		}
+
+		&:before {
+			width: calc(100% + 16px);
+			transition: .8s cubic-bezier(0,.8,.5,1);
+		}
+	}
+
+
+	&.one {
+
+		&:after,
+		&:before{
+			background: $one;
+		}
+	}
+
+	&.two {
+
+		&:after,
+		&:before{
+			background: $two;
+		}
+	}
+
+	&.three {
+
+		&:after,
+		&:before{
+			background: $three;
+		}
+	}
+}
+
+p span.target {
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 1.2em;
+	transition: .5s cubic-bezier(0,.8,.5,1);
+	position: relative;
+	display: inline-block;
+
+	&:before{
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		height: 100%;
+		width: 0%;
+		z-index: -1;
+		opacity: .5;
+		transition: .5s cubic-bezier(0,.8,.5,1);
+		background: $one;
+	}
+
+	&.highlight {
+		padding-left: 16px;
+		padding-right: 16px;
+		transition: .5s cubic-bezier(0,.8,.5,1);
+		transition-delay: .2s; 
+		color: $text2;
+
+		&:before {
+			width: 100%;
+			transition: .8s cubic-bezier(0,.8,.5,1);
+			transition-delay: .2s;
+		}
+	}
+
+	&.one {
+
+		&:before{
+			background: $one;
+		}
+	}
+
+	&.two {
+
+		&:before{
+			background: $two;
+		}
+	}
+
+	&.three {
+
+		&:before{
+			background: $three;
+		}
+	}
+}
+
+
+.home_img {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.animated_bkg {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    
+
+    .targetimg {
+    	object-fit: cover;
+    	height: 100%;
+    	width: 100%;
+    	transform: translateX(100%);
+    	position: relative;
+    	z-index: 0;
+
+    	&.show {
+    		transform: translateX(0%);
+    		transition: .8s cubic-bezier(0,.8,.5,1);
+			transition-delay: .5s;
+    	}
+
+    	&:before {
+    		content: "";
+    		position: absolute;
+    		height: 100%;
+    		width: 100%;
+    		top: 0;
+    		left: 0;
+    		z-index: 1;
+    	}
+
+    	&:after {
+    		content: "";
+    		position: absolute;
+    		height: 100%;
+    		width: 100%;
+    		top: 0;
+    		left: 0;
+    		z-index: 1;
+    	}
+
+    	&.one {
+
+			&:before,
+			&:after{
+				background: $one;
+				}
+			}
+
+		&.two {
+
+			&:before,
+			&:after{
+				background: $two;
+			}
+		}
+
+		&.three {
+
+			&:before,
+			&:after{
+				background: $three;
+			}
+		}
+    }
+}
+
