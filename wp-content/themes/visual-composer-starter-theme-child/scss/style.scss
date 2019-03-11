@@ -72,6 +72,10 @@ p,
 		z-index: -1;
 		opacity: .5;
 		transition: .8s cubic-bezier(0,.8,.5,1);
+
+		@media screen and (max-width: 768px){
+			display: none;	
+		}
 	}
 
 	&:before{
@@ -96,11 +100,20 @@ p,
 		&:before {
 			width: calc(100% + 16px);
 			transition: .8s cubic-bezier(0,.8,.5,1);
+
+			@media screen and (max-width: 768px){
+				width: 0%;
+			}
 		}
 	}
 
 
 	&.one {
+		//background: $one;
+
+		@media screen and (max-width: 768px){
+			width: 0%;
+		}
 
 		&:after,
 		&:before{
@@ -109,6 +122,7 @@ p,
 	}
 
 	&.two {
+		//background: $two;
 
 		&:after,
 		&:before{
@@ -117,6 +131,7 @@ p,
 	}
 
 	&.three {
+		//background: $three;
 
 		&:after,
 		&:before{
